@@ -19,7 +19,6 @@ class NetworkManager {
     
     func parseJSON(urlStr: String, completion: @escaping (String) -> Void) {
         let urlString = urlStr
-//        let urlString = "https://dog.ceo/api/breeds/image/random"
         guard let url = URL(string: urlString) else {return}
         URLSession.shared.dataTask(with: url) { (data, responce, error) in
             guard let data = data else {return}
